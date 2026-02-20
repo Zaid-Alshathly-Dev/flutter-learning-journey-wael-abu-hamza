@@ -39,7 +39,7 @@ To test any of the applications locally, ensure you have the Flutter SDK install
 
 1.  **Clone the repo:**
     ```bash
-    git clone [https://github.com/YourUsername/your-repo-name.git](https://github.com/YourUsername/your-repo-name.git)
+    git clone [https://github.com/Zaid-Alshathly-Dev/flutter-learning-journey-wael-abu-hamza.git]
     ```
 2.  **Get dependencies:**
     ```bash
