@@ -2005,3 +2005,825 @@
 //     );
 //   }
 // }
+
+// lesson-16
+// (Example part-2)
+// import 'package:flutter/material.dart';
+
+// void main() {
+//   runApp(const MainApp());
+// }
+
+// class MainApp extends StatelessWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: const Text("Card And listTile"),
+//           backgroundColor: const Color.fromARGB(255, 220, 136, 191),
+//         ),
+//         body: Container(
+//           decoration: BoxDecoration(
+//             border: Border.all(
+//               color: const Color.fromARGB(255, 57, 128, 178),
+//               width: 5,
+//             ),
+//           ),
+
+//           padding: EdgeInsets.all(10),
+//           child: Column(
+//             children: [
+//               Container(
+//                 margin: EdgeInsets.only(bottom: 10),
+//                 decoration: BoxDecoration(
+//                   border: Border.all(
+//                     color: const Color.fromARGB(255, 2, 3, 4),
+//                     width: 2,
+//                   ),
+//                   color: const Color.fromARGB(255, 214, 220, 224),
+//                 ),
+//                 padding: EdgeInsets.all(10),
+//                 width: 1000,
+//                 child: Text(
+//                   "Zaid Alshathly",
+//                   textAlign: TextAlign.center,
+//                   style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
+//                 ),
+//               ),
+
+//               Container(
+//                 decoration: BoxDecoration(
+//                   border: Border.all(
+//                     color: const Color.fromARGB(255, 2, 3, 4),
+//                     width: 2,
+//                   ),
+//                   color: const Color.fromARGB(255, 214, 220, 224),
+//                 ),
+//                 padding: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+//                 width: 1000,
+//                 child: Text(
+//                   "Zaid Alshathly asdfghjkl efhu;o FEWIFGI FWEBFPI we8t78ge ewt7gehg9 qwfpiEW EWUOFH[OI WEFh weoijio 12345678 eryf9ph ]ew8OG weyf ",
+//                   textAlign: TextAlign.center,
+//                   style: TextStyle(fontSize: 16),
+//                 ),
+//               ),
+
+//               Container(
+//                 margin: EdgeInsets.only(top: 10),
+//                 decoration: BoxDecoration(
+//                   border: Border.all(
+//                     color: const Color.fromARGB(255, 0, 0, 0),
+//                     width: 2,
+//                   ),
+//                   color: const Color.fromARGB(255, 214, 220, 224),
+//                 ),
+//                 padding: EdgeInsets.symmetric(vertical: 10),
+//                 width: 1000,
+//                 child: Row(
+//                   mainAxisAlignment: MainAxisAlignment.spaceAround,
+//                   children: [
+//                     Row(
+//                       children: [
+//                         Icon(Icons.star, size: 20),
+//                         Icon(Icons.star, size: 20),
+//                         Icon(Icons.star, size: 20),
+//                         Icon(Icons.star, size: 20),
+//                         Icon(Icons.star, size: 20),
+//                       ],
+//                     ),
+//                     Text("179 Reviews"),
+//                   ],
+//                 ),
+//               ),
+//               Container(
+//                 padding: EdgeInsets.all(10),
+//                 margin: EdgeInsets.only(top: 20),
+//                 decoration: BoxDecoration(
+//                   border: Border.all(color: Colors.black, width: 2),
+//                   color: const Color.fromARGB(255, 214, 220, 224),
+//                 ),
+
+//                 child: Row(
+//                   mainAxisAlignment: MainAxisAlignment.spaceAround,
+//                   children: [
+//                     Column(
+//                       children: [
+//                         Icon(Icons.person),
+//                         Text("PRIS"),
+//                         Container(height: 5),
+//                         Text("25 min"),
+//                       ],
+//                     ),
+//                     Column(
+//                       children: [
+//                         Icon(Icons.alarm),
+//                         Text("PRIS"),
+//                         Container(height: 5),
+//                         Text("25 min"),
+//                       ],
+//                     ),
+//                     Column(
+//                       children: [
+//                         Icon(Icons.restaurant),
+//                         Text("PRIS"),
+//                         Container(height: 5),
+//                         Text("25 min"),
+//                       ],
+//                     ),
+//                   ],
+//                 ),
+//               ),
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+// lesson-17
+// (Button)
+// import 'package:flutter/material.dart';
+
+// void main() {
+//   runApp(const MainApp());
+// }
+
+// class MainApp extends StatelessWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+//         floatingActionButton: FloatingActionButton(
+//           backgroundColor: const Color.fromARGB(255, 220, 136, 191),
+//           shape: RoundedRectangleBorder(
+//             borderRadius: BorderRadius.all(Radius.circular(10)),
+//           ),
+//           child: Icon(Icons.add, color: Colors.white),
+//           onPressed: () {
+//             print("zaid");
+//           },
+//         ),
+//         appBar: AppBar(
+//           title: const Text("Card And listTile"),
+//           backgroundColor: const Color.fromARGB(255, 220, 136, 191),
+//         ),
+//         body: Container(
+//           padding: EdgeInsets.all(10),
+//           child: ListView(
+//             children: [
+//               Container(height: 100, width: 1000, color: Colors.amber),
+//               Container(
+//                 height: 100,
+//                 width: 1000,
+//                 color: const Color.fromARGB(255, 7, 255, 152),
+//               ),
+//               Container(height: 100, width: 1000, color: Colors.amber),
+//               Container(
+//                 height: 100,
+//                 width: 1000,
+//                 color: const Color.fromARGB(255, 7, 23, 255),
+//               ),
+//               Container(
+//                 height: 100,
+//                 width: 1000,
+//                 color: const Color.fromARGB(255, 116, 88, 5),
+//               ),
+//               Container(height: 100, width: 1000, color: Colors.amber),
+//               Container(
+//                 height: 100,
+//                 width: 1000,
+//                 color: const Color.fromARGB(255, 197, 7, 255),
+//               ),
+//               Container(height: 100, width: 1000, color: Colors.amber),
+//               Container(
+//                 height: 100,
+//                 width: 1000,
+//                 color: const Color.fromARGB(255, 185, 7, 255),
+//               ),
+//               //   MaterialButton(
+//               //     color: Colors.blueGrey,
+//               //     minWidth: 10,
+//               //     padding: EdgeInsets.only(top: 5, bottom: 5, right: 2, left: 2),
+//               //     onLongPress: () {
+//               //       print("No my frind");
+//               //     },
+//               //     onPressed: () {
+//               //       print("My name is Zaid");
+//               //     },
+//               //     child: Text(
+//               //       "zaid Alshathly",
+//               //       style: TextStyle(color: Colors.white),
+//               //     ),
+//               //   ),
+//               //   IconButton(
+//               //     onLongPress: () {
+//               //       print("No my frind");
+//               //     },
+//               //     onPressed: () {
+//               //       print("My name is Zaid");
+//               //     },
+//               //     icon: Icon(Icons.person),
+//               //   ),
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+// lesson-18
+// (StatefulWidget__setState__flutter)
+// import 'package:flutter/material.dart';
+
+// void main() {
+//   runApp(MainApp());
+// }
+
+// class MainApp extends StatefulWidget {
+//   MainApp({super.key});
+
+//   State<MainApp> createState() => _MainAppState();
+// }
+
+// class _MainAppState extends State<MainApp> {
+//   //   int i = 0;
+//   bool status = true;
+
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: const Text("StatefulWidget &StatelessWidget"),
+//           backgroundColor: const Color.fromARGB(255, 220, 136, 191),
+//         ),
+//         body: Container(
+//           padding: EdgeInsets.all(10),
+//           child: Column(
+//             children: [
+//               IconButton(
+//                 onPressed: () {
+//                   setState(() {
+//                     status = true;
+//                     // i++;
+//                   });
+
+//                   //   print(i);
+//                 },
+//                 icon: Icon(Icons.add),
+//               ),
+//               status == true
+//                   ? Icon(Icons.star)
+//                   : Icon(Icons.star_border_outlined),
+
+//               //   Text("Counter $i"),
+//               IconButton(
+//                 onPressed: () {
+//                   setState(() {
+//                     status = false;
+//                     // i--;
+//                   });
+//                   //   print(i);
+//                 },
+//                 icon: Icon(Icons.remove),
+//               ),
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+// // class MainApp extends StatelessWidget {
+// //   MainApp({super.key});
+// //   int i = 0;
+// //   @override
+// //   Widget build(BuildContext context) {
+// //     return MaterialApp(
+// //       home: Scaffold(
+// //         appBar: AppBar(
+// //           title: const Text("StatefulWidget &StatelessWidget"),
+// //           backgroundColor: const Color.fromARGB(255, 220, 136, 191),
+// //         ),
+// //         body: Container(
+// //           padding: EdgeInsets.all(10),
+// //           child: Column(
+// //             children: [
+// //               IconButton(
+// //                 onPressed: () {
+// //                   i++;
+// //                   print(i);
+// //                 },
+// //                 icon: Icon(Icons.add),
+// //               ),
+// //               Text("Counter $i"),
+// //               IconButton(
+// //                 onPressed: () {
+// //                   i--;
+// //                   print(i);
+// //                 },
+// //                 icon: Icon(Icons.remove),
+// //               ),
+// //             ],
+// //           ),
+// //         ),
+// //       ),
+// //     );
+// //   }
+// // }
+
+// lesson-19
+// (switchListTile__switch__flutter)
+// import 'package:flutter/material.dart';
+
+// void main() {
+//   runApp(MainApp());
+// }
+
+// class MainApp extends StatefulWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   State<MainApp> createState() => _MainAppState();
+// }
+
+// class _MainAppState extends State<MainApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     bool status = true;
+//     return MaterialApp(
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: const Text("Switch"),
+//           backgroundColor: const Color.fromARGB(255, 220, 136, 191),
+//         ),
+//         body: Container(
+//           padding: EdgeInsets.all(10),
+//           child: Column(
+//             children: [
+//               Container(
+//                 width: 200,
+//                 color: const Color.fromARGB(255, 223, 230, 233),
+
+//                 child: SwitchListTile(
+//                   title: Text("Status"),
+//                   activeColor: const Color.fromARGB(255, 109, 9, 129),
+//                   inactiveThumbColor: const Color.fromARGB(255, 187, 58, 7),
+//                   activeTrackColor: const Color.fromARGB(255, 226, 224, 224),
+//                   value: status,
+//                   onChanged: (value) {
+//                     print("onChange======================");
+//                     setState(() {
+//                       status = value;
+//                     });
+//                   },
+//                 ),
+//               ),
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+// lesson-20
+// (RadioListTile__Radio__flutter)
+// import 'package:flutter/material.dart';
+
+// void main() {
+//   runApp(MainApp());
+// }
+
+// class MainApp extends StatefulWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   State<MainApp> createState() => _MainAppState();
+// }
+
+// class _MainAppState extends State<MainApp> {
+//   String? country;
+//   int? age;
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: const Text("Radio"),
+//           backgroundColor: const Color.fromARGB(255, 220, 136, 191),
+//         ),
+//         body: Container(
+//           padding: EdgeInsets.all(10),
+//           child: Column(
+//             children: [
+//               Text("Chose your country", style: TextStyle(fontSize: 20)),
+//               RadioListTile(
+//                 tileColor: const Color.fromARGB(255, 199, 215, 223),
+//                 title: Text("Yemen"),
+//                 value: "Yemen",
+//                 groupValue: country,
+//                 onChanged: (val) {
+//                   // print("Yemen");
+//                   setState(() {
+//                     country = val;
+//                   });
+//                 },
+//               ),
+//               RadioListTile(
+//                 tileColor: const Color.fromARGB(255, 182, 197, 204),
+//                 title: Text("Oman"),
+//                 value: "Oman",
+//                 groupValue: country,
+//                 onChanged: (val) {
+//                   // print("Oman");
+//                   setState(() {
+//                     country = val;
+//                   });
+//                 },
+//               ),
+//               RadioListTile(
+//                 tileColor: const Color.fromARGB(255, 162, 174, 180),
+
+//                 title: Text("SA"),
+//                 value: "SA",
+//                 groupValue: country,
+//                 onChanged: (val) {
+//                   // print("SA");
+//                   setState(() {
+//                     country = val;
+//                   });
+//                 },
+//               ),
+
+//               Container(
+//                 padding: EdgeInsets.only(top: 20),
+//                 child: Text("Chose your age", style: TextStyle(fontSize: 20)),
+//               ),
+//               RadioListTile(
+//                 tileColor: const Color.fromARGB(255, 199, 215, 223),
+//                 title: Text("14"),
+//                 value: 14,
+//                 groupValue: age,
+//                 onChanged: (val) {
+//                   // print("Yemen");
+//                   setState(() {
+//                     age = val;
+//                   });
+//                 },
+//               ),
+//               RadioListTile(
+//                 tileColor: const Color.fromARGB(255, 182, 197, 204),
+//                 title: Text("12"),
+//                 value: 12,
+//                 groupValue: age,
+//                 onChanged: (val) {
+//                   // print("Oman");
+//                   setState(() {
+//                     age = val;
+//                   });
+//                 },
+//               ),
+//               RadioListTile(
+//                 tileColor: const Color.fromARGB(255, 162, 174, 180),
+
+//                 title: Text("10"),
+//                 value: 10,
+//                 groupValue: age,
+//                 onChanged: (val) {
+//                   // print("SA");
+//                   setState(() {
+//                     age = val;
+//                   });
+//                 },
+//               ),
+//               Text("My country is $country", style: TextStyle(fontSize: 18)),
+//               Text("MY age is $age", style: TextStyle(fontSize: 17)),
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+// lesson-21
+// (CheckboxListTile__Checkbos__flutter)
+// import 'package:flutter/material.dart';
+
+// void main() {
+//   runApp(MainApp());
+// }
+
+// class MainApp extends StatefulWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   State<MainApp> createState() => _MainAppState();
+// }
+
+// class _MainAppState extends State<MainApp> {
+//   bool check1 = false;
+//   bool check2 = false;
+//   bool check3 = false;
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: const Text("Radio"),
+//           backgroundColor: const Color.fromARGB(255, 220, 136, 191),
+//         ),
+//         body: Container(
+//           padding: EdgeInsets.all(10),
+//           child: Column(
+//             children: [
+//               Text("My favorite color is/are", style: TextStyle(fontSize: 20)),
+//               CheckboxListTile(
+//                 title: Text("red"),
+//                 value: check1,
+//                 onChanged: (val) {
+//                   setState(() {
+//                     check1 = val!;
+//                   });
+//                 },
+//               ),
+//               CheckboxListTile(
+//                 title: Text("yellow"),
+//                 value: check2,
+//                 onChanged: (val) {
+//                   setState(() {
+//                     check2 = val!;
+//                   });
+//                 },
+//               ),
+//               CheckboxListTile(
+//                 title: Text("green"),
+//                 value: check3,
+//                 onChanged: (val) {
+//                   setState(() {
+//                     check3 = val!;
+//                   });
+//                 },
+//               ),
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+// lesson-22
+// (Stack__flutter)
+// import 'package:flutter/material.dart';
+
+// void main() {
+//   runApp(MainApp());
+// }
+
+// class MainApp extends StatefulWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   State<MainApp> createState() => _MainAppState();
+// }
+
+// class _MainAppState extends State<MainApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: const Text("Stack"),
+//           backgroundColor: const Color.fromARGB(255, 220, 136, 191),
+//         ),
+//         body: Container(
+//           // padding: EdgeInsets.all(10),
+//           child: Stack(
+//             alignment: Alignment.center,
+//             clipBehavior: Clip.none,
+//             children: [
+//               Container(width: 300, height: 300, color: Colors.black),
+//               Container(
+//                 width: 200,
+//                 height: 200,
+//                 color: const Color.fromARGB(255, 114, 27, 27),
+//               ),
+//               Container(
+//                 width: 100,
+//                 height: 100,
+//                 color: Color.fromARGB(255, 94, 116, 36),
+//               ),
+//               Positioned(
+//                 top: 10,
+//                 bottom: -120,
+//                 child: Container(
+//                   width: 50,
+//                   height: 50,
+//                   color: Color.fromARGB(255, 128, 121, 121),
+//                 ),
+//               ),
+//               Positioned(top: 0, bottom: 0, child: Text("shathly")),
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+// lesson-23
+// (TextField__part1__flutter)
+// import 'package:flutter/material.dart';
+
+// void main() {
+//   runApp(MainApp());
+// }
+
+// class MainApp extends StatefulWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   State<MainApp> createState() => _MainAppState();
+// }
+
+// class _MainAppState extends State<MainApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: const Text("TextFormField"),
+//           backgroundColor: const Color.fromARGB(255, 220, 136, 191),
+//         ),
+//         body: Container(
+//           padding: EdgeInsets.all(10),
+//           child: Column(
+//             children: [
+//               TextField(
+//                 decoration: InputDecoration(
+//                   // hintText: "username",
+//                   // labelText: "username",
+//                   // prefix: Icon(Icons.person),
+//                   // suffix: Icon(Icons.person),
+//                   // suffixIcon: Icon(Icons.person),
+//                   // suffixIconColor: const Color.fromARGB(255, 44, 154, 209),
+//                   prefixText: "zaid",
+//                   prefixStyle: TextStyle(
+//                     color: Colors.amber,
+//                     fontWeight: FontWeight.bold,
+//                     fontSize: 20,
+//                   ),
+//                 ),
+//               ),
+//               TextField(
+//                 decoration: InputDecoration(
+//                   icon: Icon(Icons.person),
+//                   iconColor: Colors.deepPurple,
+//                   fillColor: Colors.blueGrey,
+//                   filled: true,
+//                   suffixText: "Email",
+//                   suffixStyle: TextStyle(
+//                     color: Colors.amber,
+//                     fontWeight: FontWeight.bold,
+//                     fontSize: 20,
+//                   ),
+//                   // hintText: "Email",
+//                   // labelText: "Email ",
+//                 ),
+//               ),
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+// lesson-24
+// (TextField__part2__flutter)
+// import 'package:flutter/material.dart';
+
+// void main() {
+//   runApp(MainApp());
+// }
+
+// class MainApp extends StatefulWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   State<MainApp> createState() => _MainAppState();
+// }
+
+// class _MainAppState extends State<MainApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: const Text("TextFormField"),
+//           backgroundColor: const Color.fromARGB(255, 220, 136, 191),
+//         ),
+//         body: Container(
+//           padding: EdgeInsets.all(10),
+//           child: Column(
+//             children: [
+//               TextField(
+//                 //  maxLength: 10,
+//                 //  keyboardType: TextInputType.phone,
+//                 //  keyboardType: TextInputType.number,
+//                 //  keyboardType: TextInputType.text,
+//                 maxLines: 4,
+
+//                 // enabled: true,
+//                 // decoration: InputDecoration(
+//                 //   border: OutlineInputBorder(),
+//                 //   focusedBorder: OutlineInputBorder(
+//                 //     borderSide: BorderSide(color: Colors.red, width: 2),
+//                 //     borderRadius: BorderRadius.circular(30),
+//                 //   ),
+//                 //   enabledBorder: OutlineInputBorder(
+//                 //     borderSide: BorderSide(color: Colors.blue, width: 2),
+//                 //     borderRadius: BorderRadius.circular(10),
+//                 //   ),
+//                 //   disabledBorder: OutlineInputBorder(
+//                 //     borderSide: BorderSide(color: Colors.black26, width: 3),
+//                 //   ),
+//                 // ),
+//               ),
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+// lesson-25
+// (TextField__part3__flutter)
+// import 'package:flutter/material.dart';
+
+// void main() {
+//   runApp(MainApp());
+// }
+
+// class MainApp extends StatefulWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   State<MainApp> createState() => _MainAppState();
+// }
+
+// class _MainAppState extends State<MainApp> {
+//   // TextEditingController username = TextEditingController();
+//   String? username;
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: const Text("TextFormField"),
+//           backgroundColor: const Color.fromARGB(255, 220, 136, 191),
+//         ),
+//         body: Container(
+//           padding: EdgeInsets.all(10),
+//           child: Column(
+//             children: [
+//               TextField(
+//                 onChanged: (val) {
+//                   setState(() {
+//                     print(val);
+//                     username = val;
+//                   });
+//                 },
+//               ),
+
+//               // TextField(controller: username),
+//               MaterialButton(
+//                 color: Colors.blueGrey,
+//                 textColor: Colors.white,
+//                 onPressed: () {
+//                   print("====================");
+//                   print(username);
+//                 },
+//                 child: Text("print"),
+//               ),
+//               Text("$username"),
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
