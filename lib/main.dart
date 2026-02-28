@@ -2827,3 +2827,649 @@
 //     );
 //   }
 // }
+
+// lesson-26
+// (TextFormField__validator__flutter)
+// import 'package:flutter/material.dart';
+
+// void main() {
+//   runApp(MainApp());
+// }
+
+// class MainApp extends StatefulWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   State<MainApp> createState() => _MainAppState();
+// }
+
+// class _MainAppState extends State<MainApp> {
+//   GlobalKey<FormState> formstate = GlobalKey();
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: const Text("TextFormField"),
+//           backgroundColor: const Color.fromARGB(255, 220, 136, 191),
+//         ),
+//         body: Container(
+//           padding: EdgeInsets.all(10),
+//           child: Form(
+//             key: formstate,
+//             child: Column(
+//               children: [
+//                 TextFormField(
+//                   validator: (value) {
+//                     if (value!.isEmpty) {
+//                       return "الحقل فارغ ";
+//                     }
+//                     if (value.length > 10) {
+//                       return "لا يمكن ان تكون القيمة اكبر من 10";
+//                     }
+//                   },
+//                 ),
+//                 MaterialButton(
+//                   textColor: Colors.white,
+//                   color: Colors.blueGrey,
+
+//                   onPressed: () {
+//                     if (formstate.currentState!.validate()) {
+//                       print("valid");
+//                     } else {
+//                       print("no valid");
+//                     }
+//                   },
+//                   child: Text("valid"),
+//                 ),
+//               ],
+//             ),
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+// // lesson-27
+// // (TextFormField__onsaved__flutter)
+// import 'package:flutter/material.dart';
+
+// void main() {
+//   runApp(MainApp());
+// }
+
+// class MainApp extends StatefulWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   State<MainApp> createState() => _MainAppState();
+// }
+
+// class _MainAppState extends State<MainApp> {
+//   GlobalKey<FormState> formstate = GlobalKey();
+//   String? username;
+//   String? phone;
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: const Text("TextFormField"),
+//           backgroundColor: const Color.fromARGB(255, 220, 136, 191),
+//         ),
+//         body: Container(
+//           padding: EdgeInsets.all(10),
+//           child: Form(
+//             key: formstate,
+//             child: Column(
+//               children: [
+//                 TextFormField(
+//                   onSaved: (val) {
+//                     username = val;
+//                   },
+//                   decoration: InputDecoration(hintText: "username"),
+//                   validator: (value) {
+//                     if (value!.isEmpty) {
+//                       return "الحقل فارغ ";
+//                     }
+//                     if (value.length > 20) {
+//                       return "لا يمكن ان تكون سم المستخدم  اكبر من 20";
+//                     }
+//                   },
+//                 ),
+//                 TextFormField(
+//                   onSaved: (val) {
+//                     phone = val;
+//                   },
+//                   decoration: InputDecoration(hintText: "phone"),
+//                   validator: (value) {
+//                     if (value!.isEmpty) {
+//                       return "الحقل فارغ ";
+//                     }
+//                     if (value.length > 10) {
+//                       return "لا يمكن ان تكون القيمة اكبر من 10";
+//                     }
+//                   },
+//                 ),
+//                 MaterialButton(
+//                   textColor: Colors.white,
+//                   color: Colors.blueGrey,
+
+//                   onPressed: () {
+//                     if (formstate.currentState!.validate()) {
+//                       formstate.currentState!.save();
+//                       print(username);
+//                       print(phone);
+//                     } else {
+//                       print("no valid");
+//                     }
+//                   },
+//                   child: Text("valid"),
+//                 ),
+//               ],
+//             ),
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+// lesson-29
+// (Appbar__flutter)
+// import 'package:flutter/material.dart';
+
+// void main() {
+//   runApp(MainApp());
+// }
+
+// class MainApp extends StatefulWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   State<MainApp> createState() => _MainAppState();
+// }
+
+// class _MainAppState extends State<MainApp> {
+//   GlobalKey<FormState> formstate = GlobalKey();
+//   String? username;
+//   String? phone;
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         appBar: AppBar(
+//           titleTextStyle: TextStyle(
+//             fontStyle: FontStyle.italic,
+//             fontWeight: FontWeight.bold,
+//             fontSize: 30,
+//           ),
+//           actions: [
+//             IconButton(
+//               onPressed: () {},
+//               icon: Icon(Icons.list),
+//               color: Colors.white ,
+//             ),
+//           ],
+//           leading: IconButton(onPressed: () {}, icon: Icon(Icons.add)),
+//           shadowColor: const Color.fromARGB(255, 0, 0, 0),
+//           elevation: 40.0,
+//           centerTitle: true,
+//           title: const Text("Appbar"),
+//           backgroundColor: const Color.fromARGB(255, 126, 31, 93),
+//         ),
+//         body: Container(
+//           padding: EdgeInsets.all(10),
+//           child: Column(children: []),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+// lesson-30
+// (drawer__flutter)
+// import 'package:flutter/material.dart';
+
+// void main() {
+//   runApp(MainApp());
+// }
+
+// class MainApp extends StatefulWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   State<MainApp> createState() => _MainAppState();
+// }
+
+// class _MainAppState extends State<MainApp> {
+//   // GlobalKey<ScaffoldState> scaffoldstate = GlobalKey();
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         // key: scaffoldstate,
+//         appBar: AppBar(
+//           title: Text("drawer", style: TextStyle(color: Colors.blueGrey)),
+//           backgroundColor: const Color.fromARGB(255, 245, 46, 46),
+//         ),
+//         drawer: Drawer(
+//           child: Container(
+//             padding: EdgeInsets.all(15),
+//             child: ListView(
+//               children: [
+//                 Row(
+//                   children: [
+//                     Container(
+//                       width: 60,
+//                       height: 60,
+//                       child: ClipRRect(
+//                         borderRadius: BorderRadius.circular(60),
+//                         child: Image.asset(
+//                           "images/367d59c6-409d-44c4-bc6e-b240fcae55e3.webp",
+//                           fit: BoxFit.cover,
+//                         ),
+//                       ),
+//                     ),
+//                     Expanded(
+//                       child: ListTile(
+//                         title: Text("Zaid"),
+//                         subtitle: Text("Hi everyone in my pages"),
+//                       ),
+//                     ),
+//                   ],
+//                 ),
+//                 ListTile(
+//                   title: Text("account"),
+//                   leading: Icon(Icons.account_balance_rounded),
+//                   onTap: () {},
+//                 ),
+//                 ListTile(
+//                   title: Text("order"),
+//                   leading: Icon(Icons.check_box),
+//                   onTap: () {},
+//                 ),
+//                 ListTile(
+//                   title: Text("person"),
+//                   leading: Icon(Icons.person),
+//                   onTap: () {},
+//                 ),
+//                 ListTile(
+//                   title: Text("percent"),
+//                   leading: Icon(Icons.percent),
+//                   onTap: () {},
+//                 ),
+//                 ListTile(
+//                   title: Text("add"),
+//                   leading: Icon(Icons.add),
+//                   onTap: () {},
+//                 ),
+//               ],
+//             ),
+//           ),
+//         ),
+//         // endDrawer: Drawer(),
+//         body: Container(
+//           padding: EdgeInsets.all(10),
+//           child: Column(
+//             mainAxisAlignment: MainAxisAlignment.center,
+//             children: [
+//               // Center(
+//               //   child: MaterialButton(
+//               //     color: Colors.blueGrey,
+//               //     textColor: Colors.white,
+//               //     onPressed: () {
+//               //       scaffoldstate.currentState!.openDrawer();
+//               //       scaffoldstate.currentState!.openEndDrawer();
+//               //     },
+//               //     child: Text("Drawer"),
+//               //   ),
+//               // ),
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+// // lesson-31
+// // (Tabbar__part1__flutter)
+// import 'package:flutter/material.dart';
+
+// void main() {
+//   runApp(MainApp());
+// }
+
+// class MainApp extends StatefulWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   State<MainApp> createState() => _MainAppState();
+// }
+
+// class _MainAppState extends State<MainApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: DefaultTabController(
+//         length: 3,
+//         child: Scaffold(
+//           appBar: AppBar(
+//             title: Text("Tabbar"),
+//             bottom: TabBar(
+//               tabs: [
+//                 Tab(child: Text("Laptop")),
+//                 Tab(child: Text("Mobile")),
+//                 Tab(child: Text("Pc")),
+//               ],
+//             ),
+//             backgroundColor: const Color.fromARGB(255, 81, 197, 255),
+//           ),
+//           body: Container(
+//             padding: EdgeInsets.all(20),
+//             child: (TabBarView(
+//               children: [
+//                 Text("Laptop page"),
+//                 Text("Mobail page"),
+//                 Text("Pc page"),
+//               ],
+//             )),
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+// // lesson-32
+// // (Tabbar__part2__flutter)
+// import 'package:flutter/material.dart';
+
+// void main() {
+//   runApp(MainApp());
+// }
+
+// class MainApp extends StatefulWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   State<MainApp> createState() => _MainAppState();
+// }
+
+// class _MainAppState extends State<MainApp> with SingleTickerProviderStateMixin {
+//   TabController? tabController;
+
+//   @override
+//   void initState() {
+//     tabController = TabController(length: 3, vsync: this);
+//     super.initState();
+//   }
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home:
+//           // DefaultTabController(
+//           //     initialIndex: 1,
+//           //     length: 3,
+//           //     child:
+//           Scaffold(
+//             appBar: AppBar(
+//               title: Text("Tabbar"),
+//               bottom: TabBar(
+//                 controller: tabController,
+//                 indicatorColor: Colors.black,
+//                 indicatorWeight: 4,
+//                 labelColor: Colors.black,
+//                 labelStyle: TextStyle(fontSize: 18),
+//                 unselectedLabelColor: Colors.blueGrey,
+//                 unselectedLabelStyle: TextStyle(fontSize: 13),
+
+//                 tabs: [
+//                   Tab(
+//                     iconMargin: EdgeInsets.only(top: 5),
+//                     icon: Icon(Icons.laptop),
+//                     text: "Laptop",
+//                   ),
+//                   Tab(
+//                     iconMargin: EdgeInsets.only(top: 5),
+//                     icon: Icon(Icons.mobile_friendly),
+//                     text: "Mobile",
+//                   ),
+//                   Tab(
+//                     iconMargin: EdgeInsets.only(top: 5),
+//                     icon: Icon(Icons.computer),
+//                     text: "Pc",
+//                   ),
+//                 ],
+//               ),
+//               backgroundColor: const Color.fromARGB(255, 81, 197, 255),
+//             ),
+//             body: Container(
+//               padding: EdgeInsets.all(20),
+//               child: (TabBarView(
+//                 controller: tabController,
+//                 children: [
+//                   Text("Laptop page"),
+//                   Text("Mobail page"),
+//                   Text("Pc page"),
+//                 ],
+//               )),
+//             ),
+//           ),
+//     );
+//   }
+// }
+
+// lesson-33
+// (BottomNavigationBar__flutter)
+// import 'package:flutter/material.dart';
+
+// void main() {
+//   runApp(MainApp());
+// }
+
+// class MainApp extends StatefulWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   State<MainApp> createState() => _MainAppState();
+// }
+
+// class _MainAppState extends State<MainApp> {
+//   int selectedIndex = 0;
+
+//   List<Widget> listwidget = [
+//     Text("page 1", style: TextStyle(fontSize: 20)),
+//     Text("page 2", style: TextStyle(fontSize: 20)),
+//   ];
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         bottomNavigationBar: BottomNavigationBar(
+//           currentIndex: selectedIndex,
+//           backgroundColor: Color.fromARGB(255, 81, 197, 255),
+//           selectedItemColor: Color.fromARGB(255, 255, 255, 255),
+//           unselectedItemColor: Colors.black,
+//           selectedFontSize: 18,
+//           unselectedFontSize: 13,
+//           selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
+//           onTap: (val) {
+//             setState(() {
+//               selectedIndex = val;
+//             });
+//           },
+
+//           items: [
+//             BottomNavigationBarItem(icon: Icon(Icons.home), label: "home"),
+//             BottomNavigationBarItem(
+//               icon: Icon(Icons.settings),
+//               label: "settings",
+//             ),
+//             // BottomNavigationBarItem(icon: Icon(Icons.home),label:"home"),
+//           ],
+//         ),
+//         appBar: AppBar(
+//           title: Text("BottomNavigationBar"),
+//           backgroundColor: const Color.fromARGB(255, 81, 197, 255),
+//         ),
+//         body: Container(child: listwidget.elementAt(selectedIndex)),
+//       ),
+//     );
+//   }
+// }
+
+// // lesson-34
+// // (PageView &PageViewBuilder)
+// import 'package:flutter/material.dart';
+
+// void main() {
+//   runApp(MainApp());
+// }
+
+// class MainApp extends StatefulWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   State<MainApp> createState() => _MainAppState();
+// }
+
+// class _MainAppState extends State<MainApp> {
+//   List imagename = [
+//     "images/367d59c6-409d-44c4-bc6e-b240fcae55e3.webp",
+//     "images/367d59c6-409d-44c4-bc6e-b240fcae55e3.webp",
+//     "images/367d59c6-409d-44c4-bc6e-b240fcae55e3.webp",
+//     "images/367d59c6-409d-44c4-bc6e-b240fcae55e3.webp",
+//     "images/367d59c6-409d-44c4-bc6e-b240fcae55e3.webp",
+//     "images/367d59c6-409d-44c4-bc6e-b240fcae55e3.webp",
+//   ];
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         appBar: AppBar(
+//           title: Text("PageView &PageViewBuilder"),
+//           backgroundColor: const Color.fromARGB(255, 81, 197, 255),
+//         ),
+//         body: Container(
+//           padding: EdgeInsets.all(10),
+//           child: Column(
+//             children: [
+//               Container(
+//                 height: 300,
+//                 child: PageView.builder(
+//                   itemCount: imagename.length,
+//                   itemBuilder: (context, i) {
+//                     return Image.asset(imagename[i], fit: BoxFit.cover);
+//                   },
+//                   // PageView(
+//                   //     // reverse: true,
+//                   //     // physics: NeverScrollableScrollPhysics(),
+//                   //   onPageChanged: (val) {
+//                   //     print(val);
+//                   //   },
+//                   //   children: [
+//                   //     Image.asset(
+//                   //       "images/367d59c6-409d-44c4-bc6e-b240fcae55e3.webp",
+//                   //       fit: BoxFit.cover,
+//                   //     ),
+//                   //     Image.asset(
+//                   //       "images/367d59c6-409d-44c4-bc6e-b240fcae55e3.webp",
+//                   //     ),
+//                   //     // Text("page view 1"), Text("bage view 2")
+//                   //   ],
+//                 ),
+//               ),
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+// lesson 35+36+37+38
+// ( custom__Widget__stortcut & Navigator & push__pushReplacement & pop)
+import 'package:flutter/material.dart';
+import 'package:flutter_learning_journey_wael_abu_hamza/homebage.dart';
+
+void main() {
+  runApp(MainApp());
+}
+
+class MainApp extends StatefulWidget {
+  const MainApp({super.key});
+
+  @override
+  State<MainApp> createState() => _MainAppState();
+}
+
+class _MainAppState extends State<MainApp> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Homebage(),
+      // Scaffold(
+      //   appBar: AppBar(
+      //     title: Text("custom"),
+      //     backgroundColor: const Color.fromARGB(255, 81, 197, 255),
+      //   ),
+      //   body: Container(
+      //     padding: EdgeInsets.all(10),
+      //     child: Column(
+      //       children: [
+      //         custom(
+      //           name: "zaid",
+      //           email: "zaid@gmail.com",
+      //           date: "2025-2-2",
+      //           image: '367d59c6-409d-44c4-bc6e-b240fcae55e3.webp',
+      //         ),
+      //         custom(
+      //           name: "omar",
+      //           email: "omar@gmail.com",
+      //           date: "2025-2-2",
+      //           image: '367d59c6-409d-44c4-bc6e-b240fcae55e3.webp',
+      //         ),
+      //         custom(
+      //           name: "anis",
+      //           email: "anis@gmail.com",
+      //           date: "2025-2-2",
+      //           image: '367d59c6-409d-44c4-bc6e-b240fcae55e3.webp',
+      //         ),
+      //         custom(
+      //           name: "sam",
+      //           email: "sam@gmail.com",
+      //           date: "2025-2-2",
+      //           image: '367d59c6-409d-44c4-bc6e-b240fcae55e3.webp',
+      //         ),
+
+      //         // Card(
+      //         //   child: ListTile(
+      //         //     title: Text("zaid"),
+      //         //     subtitle: Text("zaid@gmail.com"),
+      //         //     trailing: Text("2025"),
+      //         //   ),
+      //         // ),
+      //         // Card(
+      //         //   child: ListTile(
+      //         //     title: Text("zaid"),
+      //         //     subtitle: Text("zaid@gmail.com"),
+      //         //     trailing: Text("2025"),
+      //         //   ),
+      //         // ),
+      //       ],
+      //     ),
+      //   ),
+      // ),
+    );
+  }
+}

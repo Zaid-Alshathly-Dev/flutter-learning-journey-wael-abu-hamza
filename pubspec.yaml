@@ -17,3 +17,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - images/367d59c6-409d-44c4-bc6e-b240fcae55e3.webp
+ 
