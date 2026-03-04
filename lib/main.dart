@@ -3397,79 +3397,159 @@
 //   }
 // }
 
-// lesson 35+36+37+38
-// ( custom__Widget__stortcut & Navigator & push__pushReplacement & pop)
-import 'package:flutter/material.dart';
-import 'package:flutter_learning_journey_wael_abu_hamza/homebage.dart';
+// // lesson 35+36+37+38+39
+// // ( custom__Widget__stortcut & Navigator & push__pushReplacement & pop & with routes)
+// import 'package:flutter/material.dart';
+// import 'package:flutter_learning_journey_wael_abu_hamza/Aboutus.dart';
+// import 'package:flutter_learning_journey_wael_abu_hamza/contact.dart';
+// import 'package:flutter_learning_journey_wael_abu_hamza/homebage.dart';
 
-void main() {
-  runApp(MainApp());
-}
+// void main() {
+//   runApp(MainApp());
+// }
 
-class MainApp extends StatefulWidget {
-  const MainApp({super.key});
+// class MainApp extends StatefulWidget {
+//   const MainApp({super.key});
 
-  @override
-  State<MainApp> createState() => _MainAppState();
-}
+//   @override
+//   State<MainApp> createState() => _MainAppState();
+// }
 
-class _MainAppState extends State<MainApp> {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Homebage(),
-      // Scaffold(
-      //   appBar: AppBar(
-      //     title: Text("custom"),
-      //     backgroundColor: const Color.fromARGB(255, 81, 197, 255),
-      //   ),
-      //   body: Container(
-      //     padding: EdgeInsets.all(10),
-      //     child: Column(
-      //       children: [
-      //         custom(
-      //           name: "zaid",
-      //           email: "zaid@gmail.com",
-      //           date: "2025-2-2",
-      //           image: '367d59c6-409d-44c4-bc6e-b240fcae55e3.webp',
-      //         ),
-      //         custom(
-      //           name: "omar",
-      //           email: "omar@gmail.com",
-      //           date: "2025-2-2",
-      //           image: '367d59c6-409d-44c4-bc6e-b240fcae55e3.webp',
-      //         ),
-      //         custom(
-      //           name: "anis",
-      //           email: "anis@gmail.com",
-      //           date: "2025-2-2",
-      //           image: '367d59c6-409d-44c4-bc6e-b240fcae55e3.webp',
-      //         ),
-      //         custom(
-      //           name: "sam",
-      //           email: "sam@gmail.com",
-      //           date: "2025-2-2",
-      //           image: '367d59c6-409d-44c4-bc6e-b240fcae55e3.webp',
-      //         ),
+// class _MainAppState extends State<MainApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Homebage(),
+//       routes: {
+//       "home" :(context) => Homebage(),
+//       "About" :(context) => Aboutus(),
+//       "contact" :(context) => Contact(),
+//       }
+//       // Scaffold(
+//       //   appBar: AppBar(
+//       //     title: Text("custom"),
+//       //     backgroundColor: const Color.fromARGB(255, 81, 197, 255),
+//       //   ),
+//       //   body: Container(
+//       //     padding: EdgeInsets.all(10),
+//       //     child: Column(
+//       //       children: [
+//       //         custom(
+//       //           name: "zaid",
+//       //           email: "zaid@gmail.com",
+//       //           date: "2025-2-2",
+//       //           image: '367d59c6-409d-44c4-bc6e-b240fcae55e3.webp',
+//       //         ),
+//       //         custom(
+//       //           name: "omar",
+//       //           email: "omar@gmail.com",
+//       //           date: "2025-2-2",
+//       //           image: '367d59c6-409d-44c4-bc6e-b240fcae55e3.webp',
+//       //         ),
+//       //         custom(
+//       //           name: "anis",
+//       //           email: "anis@gmail.com",
+//       //           date: "2025-2-2",
+//       //           image: '367d59c6-409d-44c4-bc6e-b240fcae55e3.webp',
+//       //         ),
+//       //         custom(
+//       //           name: "sam",
+//       //           email: "sam@gmail.com",
+//       //           date: "2025-2-2",
+//       //           image: '367d59c6-409d-44c4-bc6e-b240fcae55e3.webp',
+//       //         ),
 
-      //         // Card(
-      //         //   child: ListTile(
-      //         //     title: Text("zaid"),
-      //         //     subtitle: Text("zaid@gmail.com"),
-      //         //     trailing: Text("2025"),
-      //         //   ),
-      //         // ),
-      //         // Card(
-      //         //   child: ListTile(
-      //         //     title: Text("zaid"),
-      //         //     subtitle: Text("zaid@gmail.com"),
-      //         //     trailing: Text("2025"),
-      //         //   ),
-      //         // ),
-      //       ],
-      //     ),
-      //   ),
-      // ),
-    );
-  }
-}
+//       //         // Card(
+//       //         //   child: ListTile(
+//       //         //     title: Text("zaid"),
+//       //         //     subtitle: Text("zaid@gmail.com"),
+//       //         //     trailing: Text("2025"),
+//       //         //   ),
+//       //         // ),
+//       //         // Card(
+//       //         //   child: ListTile(
+//       //         //     title: Text("zaid"),
+//       //         //     subtitle: Text("zaid@gmail.com"),
+//       //         //     trailing: Text("2025"),
+//       //         //   ),
+//       //         // ),
+//       //       ],
+//       //     ),
+//       //   ),
+//       // ),
+//     );
+//   }
+// }
+
+//lesson-40
+//(showDailog)
+
+// import 'package:flutter/material.dart';
+// import 'package:flutter_learning_journey_wael_abu_hamza/homebage.dart';
+
+// void main() {
+//   runApp(MainApp());
+// }
+
+// class MainApp extends StatefulWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   State<MainApp> createState() => _MainAppState();
+// }
+
+// class _MainAppState extends State<MainApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(home: Homebage());
+//   }
+// }
+
+// //lesson-41
+// // (ShowBottomSheet & snakbar)
+// import 'package:flutter/material.dart';
+// import 'package:flutter_learning_journey_wael_abu_hamza/homebage.dart';
+
+// void main() {
+//   runApp(MainApp());
+// }
+
+// class MainApp extends StatefulWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   State<MainApp> createState() => _MainAppState();
+// }
+
+// class _MainAppState extends State<MainApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(home: Homebage());
+//   }
+// }
+
+// //lesson-41 to 46
+// // (ShowBottomSheet & snakbar)
+// import 'package:flutter/material.dart';
+// import 'package:flutter_learning_journey_wael_abu_hamza/homebage.dart';
+
+// void main() {
+//   runApp(MainApp());
+// }
+
+// class MainApp extends StatefulWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   State<MainApp> createState() => _MainAppState();
+// }
+
+// class _MainAppState extends State<MainApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp
+//     (home: Homebage(
+
+//     ));
+//   }
+// }
