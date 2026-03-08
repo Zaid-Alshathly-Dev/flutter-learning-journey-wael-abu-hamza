@@ -9,6 +9,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  awesome_dialog: ^3.3.0
+  http: ^1.6.0
+  drop_down_list: ^2.1.1
+  shared_preferences: ^2.5.4
 
 dev_dependencies:
   flutter_test:
@@ -22,4 +26,11 @@ flutter:
     - images/367d59c6-409d-44c4-bc6e-b240fcae55e3.webp
     - images/product9.jpg
     - images/product3.jpg
+
+
+  fonts:
+    - family: BebasNeue
+      fonts:
+        - asset: fonts/BebasNeue-Regular.ttf
+        
  

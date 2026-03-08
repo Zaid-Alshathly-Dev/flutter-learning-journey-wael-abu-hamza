@@ -386,3 +386,561 @@
 //   }
 // }
 
+// // lesson-48
+// // (initState_dispose)
+// import 'package:flutter/material.dart';
+
+// class Homebage extends StatefulWidget {
+//   const Homebage({super.key});
+
+//   @override
+//   State<Homebage> createState() => _HomebageState();
+// }
+
+// class _HomebageState extends State<Homebage> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text("Inition State And Dispose"),
+//         backgroundColor: Colors.blue,
+//       ),
+//       body: ListView(
+//         children: [
+//           MaterialButton(
+//             onPressed: () {
+//               Navigator.of(context).pushNamed("pageone");
+//             },
+//             child: Text("Go to page one"),
+//           ),
+//           MaterialButton(
+//             onPressed: () {
+//               Navigator.of(context).pushNamed("pagetwo");
+//             },
+//             child: Text("Go to page two"),
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
+
+// // lesson-49
+// // (PopupMenuBottom)
+// import 'package:flutter/material.dart';
+
+// class Homebage extends StatefulWidget {
+//   const Homebage({super.key});
+
+//   @override
+//   State<Homebage> createState() => _HomebageState();
+// }
+
+// class _HomebageState extends State<Homebage> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text("PopupmenuBotton"),
+//         backgroundColor: Colors.blueAccent,
+//         actions: [
+//           // PopupMenuButton(
+//           //   // color: Colors.black,
+//           //   icon: Icon(Icons.access_alarm),
+//           //   iconColor: Colors.white,
+//           //   iconSize: 35,
+//           //   onSelected: (val) {
+//           //     print(val);
+//           //   },
+//           //   onOpened: () {
+//           //     print("open");
+//           //   },
+//           //   onCanceled: () {
+//           //     print("close");
+//           //   },
+//           //   itemBuilder: (context) => [
+//           //     PopupMenuItem(child: Text("one"), value: "valone"),
+//           //     PopupMenuItem(child: Text("two"), value: "valtwo"),
+//           //   ],
+//           // ),
+//           PopupMenuButton(
+//             itemBuilder: (context) => [
+//               PopupMenuItem(
+//                 child: Text("one"),
+//                 onTap: () {
+//                   print("one");
+//                 },
+//               ),
+//               PopupMenuItem(
+//                 child: Text("two"),
+//                 onTap: () {
+//                   print("two");
+//                 },
+//               ),
+//             ],
+//           ),
+//         ],
+//       ),
+//       body: ListView(children: []),
+//     );
+//   }
+// }
+
+// // lessons-50+51
+// // (searchDelegate_part1 & searchDelegate_part2 )
+// import 'package:flutter/material.dart';
+
+// class Homebage extends StatefulWidget {
+//   const Homebage({super.key});
+
+//   @override
+//   State<Homebage> createState() => _HomebageState();
+// }
+
+// class _HomebageState extends State<Homebage> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text("Search Delegate"),
+//         backgroundColor: Colors.blueAccent,
+//         actions: [
+//           IconButton(
+//             onPressed: () {
+//               showSearch(context: context, delegate: CustomSearch());
+//             },
+//             icon: Icon(Icons.search),
+//           ),
+//         ],
+//       ),
+//       body: Container(child: ListView(children: [])),
+//     );
+//   }
+// }
+
+// class CustomSearch extends SearchDelegate {
+//   List usernames = [
+//     "Zaid",
+//     "omar",
+//     "bara",
+//     "amis",
+//     "mohamed",
+//     "abod",
+//     "hareth",
+//   ];
+
+//   List? filter;
+
+//   @override
+//   List<Widget>? buildActions(BuildContext context) {
+//     return [
+//       IconButton(
+//         onPressed: () {
+//           query = "";
+//         },
+//         icon: Icon(Icons.close),
+//       ),
+//     ];
+//   }
+
+//   @override
+//   Widget? buildLeading(BuildContext context) {
+//     return IconButton(
+//       onPressed: () {
+//         close(context, null);
+//       },
+//       icon: Icon(Icons.arrow_back),
+//     );
+//   }
+
+//   @override
+//   Widget buildResults(BuildContext context) {
+//     return Text("hi");
+//   }
+
+//   @override
+//   Widget buildSuggestions(BuildContext context) {
+//     if (query == " ") {
+//       return ListView.builder(
+//         itemCount: usernames.length,
+//         itemBuilder: (context, index) {
+//           return InkWell(
+//             onTap: () {
+//               showResults(context);
+//             },
+//             child: Card(
+//               child: Padding(
+//                 padding: const EdgeInsets.all(18.0),
+//                 child: Text(
+//                   "${usernames[index]}",
+//                   style: TextStyle(fontSize: 16),
+//                 ),
+//               ),
+//             ),
+//           );
+//         },
+//       );
+//     } else {
+//       filter = usernames.where((element) => element.contains(query)).toList();
+//       // filter = usernames.where((element) => element.startsWith(query)).toList();
+//       return ListView.builder(
+//         itemCount: filter!.length,
+//         itemBuilder: (context, index) {
+//           return InkWell(
+//             onTap: () {
+//               showResults(context);
+//             },
+//             child: Card(
+//               child: Padding(
+//                 padding: const EdgeInsets.all(18.0),
+//                 child: Text(
+//                   "${filter![index]}",
+//                   style: TextStyle(fontSize: 16),
+//                 ),
+//               ),
+//             ),
+//           );
+//         },
+//       );
+//     }
+//   }
+// }
+
+// // lesson-52
+// // (scroll)
+// import 'package:flutter/material.dart';
+
+// class Homebage extends StatefulWidget {
+//   const Homebage({super.key});
+
+//   @override
+//   State<Homebage> createState() => _HomebageState();
+// }
+
+// class _HomebageState extends State<Homebage> {
+//   ScrollController? scrollController;
+
+//   @override
+//   void dispose() {
+//     scrollController?.dispose();
+//     print("scrollController is dispose");
+//     super.dispose();
+//   }
+
+//   @override
+//   void initState() {
+//     scrollController = ScrollController();
+//     scrollController!.addListener(() {
+//       print("${scrollController?.offset}");
+//     });
+//     super.initState();
+//   }
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text("Scroll"),
+//         backgroundColor: Colors.black,
+//         titleTextStyle: TextStyle(color: Colors.white),
+//       ),
+//       body: ListView(
+//         controller: scrollController,
+//         children: [
+//           MaterialButton(
+//             onPressed: () {
+//               // scrollController?.jumpTo(4312);
+//               scrollController?.animateTo(
+//                 4310,
+//                 duration: Duration(seconds: 5),
+//                 curve: Curves.ease,
+//               );
+//             },
+//             child: Text("jump to bottom"),
+//           ),
+//           ...List.generate(
+//             100,
+//             (i) => Container(
+//               height: 50,
+//               alignment: Alignment.center,
+//               child: Text("$i", style: TextStyle(fontSize: 20)),
+//               color: i.isEven ? Colors.grey[200] : Colors.grey[400],
+//             ),
+//           ),
+//           MaterialButton(
+//             onPressed: () {
+//               // scrollController?.jumpTo(0);
+//               scrollController?.animateTo(
+//                 0,
+//                 duration: Duration(seconds: 5),
+//                 curve: Curves.ease,
+//               );
+//             },
+//             child: Text("jump to bottom"),
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
+
+// // lesson-54
+// // (packages_part1+packages_part2)
+// import 'package:flutter/material.dart';
+// import 'package:awesome_dialog/awesome_dialog.dart';
+
+// class Homebage extends StatefulWidget {
+//   const Homebage({super.key});
+
+//   @override
+//   State<Homebage> createState() => _HomebageState();
+// }
+
+// class _HomebageState extends State<Homebage> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text("packages"),
+//         backgroundColor: Colors.blueAccent,
+//       ),
+//       body: ListView(
+//         children: [
+//           Container(
+//             margin: EdgeInsets.symmetric(horizontal: 30),
+//             child: MaterialButton(
+//               color: Colors.black,
+//               textColor: const Color.fromRGBO(255, 255, 255, 1),
+//               onPressed: () {
+//                 AwesomeDialog(
+//                   btnOkIcon: Icons.trending_up,
+//                   btnCancelIcon: Icons.cancel,
+//                   context: context,
+//                   dialogType: DialogType.info,
+//                   animType: AnimType.rightSlide,
+//                   title: 'Dialog Title',
+//                   desc: 'Dialog description here.............',
+//                   btnCancelOnPress: () {
+//                     print("cancel");
+//                   },
+//                   btnOkOnPress: () {
+//                     print("ok");
+//                   },
+//                 )..show();
+//               },
+//               child: Text("Show Dialog"),
+//             ),
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
+
+// // lesson-55+56+57
+// // (HTTP__API_part1 + HTTP__API_part2 + FutureBuilder)
+// import 'dart:convert';
+
+// import 'package:flutter/material.dart';
+// import 'package:http/http.dart';
+
+// class Homebage extends StatefulWidget {
+//   const Homebage({super.key});
+
+//   @override
+//   State<Homebage> createState() => _HomebageState();
+// }
+
+// class _HomebageState extends State<Homebage> {
+//   // List Zaid = [
+//   //   {'name': 'zaid', 'age': 20},
+//   // ];
+
+//   // bool loading = true;
+//   // List data = [];
+
+//   Future<List> getData() async {
+//     //  loading = true;
+//     // setState(() {});
+//     var response = await get(
+//       Uri.parse("https://jsonplaceholder.typicode.com/posts"),
+//     );
+//     List responsebody = jsonDecode(response.body);
+//     return responsebody;
+//     // data.addAll(responsebody);
+//     // loading = false;
+//     // setState(() {});
+//   }
+
+//   // @override
+//   // void initState() {
+//   //   getData();
+//   //   super.initState();
+//   // }
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text("packages"),
+//         backgroundColor: Colors.blueAccent,
+//       ),
+//       body: FutureBuilder<List>(
+//         future: getData(),
+//         builder: (context, snapshot) {
+//           if (snapshot.hasData) {
+//             if (snapshot.connectionState == ConnectionState.waiting) {
+//               return Center(child: CircularProgressIndicator());
+//             }
+//             if (snapshot.connectionState == ConnectionState.done) {
+//               return ListView.builder(
+//                 itemCount: snapshot.data!.length,
+//                 itemBuilder: (context, index) {
+//                   return Card(
+//                     child: ListTile(
+//                       title: Text(snapshot.data![index]['title']),
+//                       subtitle: Text(snapshot.data![index]['body']),
+//                     ),
+//                   );
+//                 },
+//               );
+//             }
+//             return Text("");
+//           }
+//           if(snapshot.hasError){
+//             return Center(child: Text("Error"));
+//           }
+//           return Text("No Data");
+//         },
+//       ),
+//       //  ListView(
+//       //   children: [
+//       // Container(
+//       //   margin: EdgeInsets.symmetric(horizontal: 30),
+//       //   child: MaterialButton(
+//       //     color: Colors.black,
+//       //     textColor: const Color.fromRGBO(255, 255, 255, 1),
+//       //     onPressed: () async {
+//       //       loading = true;
+//       //       setState(() {});
+//       //       var response = await get(
+//       //         Uri.parse("https://jsonplaceholder.typicode.com/posts"),
+//       //       );
+//       //       var responsebody = jsonDecode(response.body);
+//       //       data.addAll(responsebody);
+//       //       loading = false;
+//       //       setState(() {});
+//       //       // print(responsebody);
+//       //     },
+//       //     // {
+//       //     //   print(Zaid[0]);
+//       //     // },
+//       //     child: Text("HTTP request"),
+//       //   ),
+//       // ),
+//       //   if (loading) Center(child: CircularProgressIndicator()),
+//       //   ...List.generate(data.length, (index) {
+//       //     return Card(
+//       //        child:
+//       //       // ListTile(
+//       //       //   title: Text(data[index]['title']),
+//       //       //   subtitle: Text(data[index]['body']),
+//       //       // ),
+//       //     )
+//       //   }),
+//       // ],
+//     );
+//   }
+// }
+
+// // lesson-59
+// // (shared_preferences)
+// import 'package:flutter/material.dart';
+// import 'package:shared_preferences/shared_preferences.dart';
+
+// class Homebage extends StatefulWidget {
+//   const Homebage({super.key});
+
+//   @override
+//   State<Homebage> createState() => _HomebageState();
+// }
+
+// class _HomebageState extends State<Homebage> {
+//   // String? name;
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text("Sheard_preferences"),
+//         backgroundColor: Colors.blue,
+//       ),
+
+//       body: ListView(
+//         children: [
+//           MaterialButton(
+//             onPressed: () async {
+//               SharedPreferences sharedPreferences =
+//                   await SharedPreferences.getInstance();
+//               sharedPreferences.setString("name", "zaid");
+//               // name = "zaid";
+//             },
+//             child: Text("set Name"),
+//           ),
+//           MaterialButton(
+//             onPressed: () async {
+//               SharedPreferences sharedPreferences =
+//                   await SharedPreferences.getInstance();
+//               String? name = sharedPreferences.getString("name");
+//               print(name);
+//               // print(name);
+//             },
+//             child: Text("print Name"),
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
+
+
+
+
+
+//  lesson-60
+// (Custom_fonts)
+
+import 'package:flutter/material.dart';
+
+class Homebage extends StatefulWidget {
+  const Homebage({super.key});
+
+  @override
+  State<Homebage> createState() => _HomebageState();
+}
+
+class _HomebageState extends State<Homebage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Custom Fonts"),
+        backgroundColor: Colors.blue,
+      ),
+      body: ListView(
+        children: [
+          Text(
+            "Custom Fonts",
+            style: TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+              color: Colors.blue,
+              // fontFamily: "BebasNeue",
+            ),
+          ),
+          
+        ],
+      ),
+    );
+  }
+}

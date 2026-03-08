@@ -3553,3 +3553,250 @@
 //     ));
 //   }
 // }
+
+// // lesson-47
+// // (List_generate)
+// import 'package:flutter/material.dart';
+// import 'package:flutter_learning_journey_wael_abu_hamza/homebage.dart';
+// import 'package:flutter_learning_journey_wael_abu_hamza/listgenerate.dart';
+
+// void main() {
+//   runApp(MainApp());
+// }
+
+// class MainApp extends StatefulWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   State<MainApp> createState() => _MainAppState();
+// }
+
+// class _MainAppState extends State<MainApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(home: listgenerate());
+//   }
+// }
+
+// lesson-48
+// (initState_dispose)
+// import 'package:flutter/material.dart';
+// import 'package:flutter_learning_journey_wael_abu_hamza/homebage.dart';
+// import 'package:flutter_learning_journey_wael_abu_hamza/pageone.dart';
+// import 'package:flutter_learning_journey_wael_abu_hamza/pagetwo.dart';
+
+// void main() {
+//   runApp(MainApp());
+// }
+
+// class MainApp extends StatefulWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   State<MainApp> createState() => _MainAppState();
+// }
+
+// class _MainAppState extends State<MainApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       home: Homebage(),
+//       routes: {
+//         "home": (context) => Homebage(),
+//         "pageone": (context) => Pageone(),
+//         "pagetwo": (context) => Pagetwo(),
+//       },
+//     );
+//   }
+// }
+
+// lesson-49
+// // (PopupMenuBottom)
+
+// import 'package:flutter/material.dart';
+// import 'package:flutter_learning_journey_wael_abu_hamza/homebage.dart';
+
+// void main() {
+//   runApp(const MainApp());
+// }
+
+// class MainApp extends StatefulWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   State<MainApp> createState() => _MainAppState();
+// }
+
+// class _MainAppState extends State<MainApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(home: Homebage());
+//   }
+// }
+
+
+
+// // lesson-50+51
+// // // (searchDelegate_part1 & searchDelegate_part2)
+
+// import 'package:flutter/material.dart';
+// import 'package:flutter_learning_journey_wael_abu_hamza/homebage.dart';
+
+// void main() {
+//   runApp(const MainApp());
+// }
+
+// class MainApp extends StatefulWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   State<MainApp> createState() => _MainAppState();
+// }
+
+// class _MainAppState extends State<MainApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(home: Homebage());
+//   }
+// }
+
+
+
+// lesson-52
+// (scroll)
+// import 'package:flutter/material.dart';
+// import 'package:flutter_learning_journey_wael_abu_hamza/homebage.dart';
+
+// void main() {
+//   runApp(const MainApp());
+// }
+
+// class MainApp extends StatefulWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   State<MainApp> createState() => _MainAppState();
+// }
+
+// class _MainAppState extends State<MainApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(home: Homebage());
+//   }
+// }
+
+
+
+
+
+
+ 
+// // lesson-53+54
+// // (packages_part1+packages_part2)
+// import 'package:flutter/material.dart';
+// import 'package:flutter_learning_journey_wael_abu_hamza/homebage.dart';
+
+// void main() {
+//   runApp(const MainApp());
+// }
+
+// class MainApp extends StatefulWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   State<MainApp> createState() => _MainAppState();
+// }
+
+// class _MainAppState extends State<MainApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(home: Homebage());
+//   }
+// }
+
+
+
+
+// // lesson-55+56+57
+// // (HTTP__API_part1 + HTTP__API_part2 + FutureBuilder)
+// import 'package:flutter/material.dart';
+// import 'package:flutter_learning_journey_wael_abu_hamza/homebage.dart';
+
+// void main() {
+//   runApp(const MainApp());
+// }
+
+// class MainApp extends StatefulWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   State<MainApp> createState() => _MainAppState();
+// }
+
+// class _MainAppState extends State<MainApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(home: Homebage());
+//   }
+// }
+
+
+
+// // lesson-59
+// // (shared_preferences)
+// import 'package:flutter/material.dart';
+// import 'package:flutter_learning_journey_wael_abu_hamza/homebage.dart';
+
+// void main() {
+//   runApp(const MainApp());
+// }
+
+// class MainApp extends StatefulWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   State<MainApp> createState() => _MainAppState();
+// }
+
+// class _MainAppState extends State<MainApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(home: Homebage());
+//   }
+// }
+
+
+
+// lesson-60
+// (Custom_fonts)
+import 'package:flutter/material.dart';
+import 'package:flutter_learning_journey_wael_abu_hamza/homebage.dart';
+
+void main() {
+  runApp(const MainApp());
+}
+
+class MainApp extends StatefulWidget {
+  const MainApp({super.key});
+
+  @override
+  State<MainApp> createState() => _MainAppState();
+}
+
+class _MainAppState extends State<MainApp> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData(
+        fontFamily: "BebasNeue",
+      ),
+      home: Homebage(
+        
+      ));
+  }
+}
+
+
+
+
