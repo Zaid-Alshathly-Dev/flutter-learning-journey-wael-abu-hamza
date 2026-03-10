@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.example.flutter_learning_journey_wael_abu_hamza"
-    compileSdk = flutter.compileSdkVersion
+    compileSdk = 35
     ndkVersion = flutter.ndkVersion
 
     compileOptions {

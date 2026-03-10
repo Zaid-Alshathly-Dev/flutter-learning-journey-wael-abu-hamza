@@ -903,44 +903,207 @@
 //   }
 // }
 
+// //  lesson-60
+// // (Custom_fonts)
+
+// import 'package:flutter/material.dart';
+
+// class Homebage extends StatefulWidget {
+//   const Homebage({super.key});
+
+//   @override
+//   State<Homebage> createState() => _HomebageState();
+// }
+
+// class _HomebageState extends State<Homebage> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text("Custom Fonts"),
+//         backgroundColor: Colors.blue,
+//       ),
+//       body: ListView(
+//         children: [
+//           Text(
+//             "Custom Fonts",
+//             style: TextStyle(
+//               fontSize: 30,
+//               fontWeight: FontWeight.bold,
+//               color: Colors.blue,
+//               // fontFamily: "BebasNeue",
+//             ),
+//           ),
+
+//         ],
+//       ),
+//     );
+//   }
+// }
+
+// //  lesson-61
+// // (Theme)
+
+// import 'package:flutter/material.dart';
+
+// class Homebage extends StatefulWidget {
+//   const Homebage({super.key});
+
+//   @override
+//   State<Homebage> createState() => _HomebageState();
+// }
+
+// class _HomebageState extends State<Homebage> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text("Custom Fonts",style: Theme.of(context).textTheme.bodySmall,),
+//       ),
+//       body: ListView(
+//         children: [
+//           Text(
+//             "Custom Fonts",
+//             style: Theme.of(context).textTheme.bodyLarge,
+//             // TextStyle(
+//             //   fontSize: 30,
+//               // fontWeight: FontWeight.bold,
+//               // color: Colors.blue,
+//               // fontFamily: "BebasNeue",
+//             // ),
+//           ),
+
+//         ],
+//       ),
+//     );
+//   }
+// }
+
+// // //  lesson-62
+// // // (Flutter_Launcher_icons)
+// import 'package:flutter/material.dart';
+
+// class Homebage extends StatefulWidget {
+//   const Homebage({super.key});
+
+//   @override
+//   State<Homebage> createState() => _HomebageState();
+// }
+
+// class _HomebageState extends State<Homebage> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold();
+//   }
+// }
 
 
 
 
-//  lesson-60
-// (Custom_fonts)
+// // //  lesson-63+64
+// // // (geolocator_part1+geolocator_part2)
+// import 'dart:async';
 
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
+// import 'package:geolocator/geolocator.dart';
 
-class Homebage extends StatefulWidget {
-  const Homebage({super.key});
+// class Homebage extends StatefulWidget {
+//   const Homebage({super.key});
 
-  @override
-  State<Homebage> createState() => _HomebageState();
-}
+//   @override
+//   State<Homebage> createState() => _HomebageState();
+// }
 
-class _HomebageState extends State<Homebage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Custom Fonts"),
-        backgroundColor: Colors.blue,
-      ),
-      body: ListView(
-        children: [
-          Text(
-            "Custom Fonts",
-            style: TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.bold,
-              color: Colors.blue,
-              // fontFamily: "BebasNeue",
-            ),
-          ),
-          
-        ],
-      ),
-    );
-  }
-}
+// class _HomebageState extends State<Homebage> {
+//   // StreamSubscription<Position>? positionStream;
+
+//   double latitude1 = 36.273;
+//   double longitude1 = 35.273;
+
+//   double latitude2 = 36.273;
+//   double longitude2 = 38.273;
+
+//   getCurentLocationApp() async {
+//     bool serverEnabled;
+//     LocationPermission permission;
+//     serverEnabled = await Geolocator.isLocationServiceEnabled();
+//     print("Location Service Enabled: $serverEnabled");
+
+//     if (serverEnabled == false) {
+//       print("Please enable location services on the device");
+//       return;
+//     }
+
+//     permission = await Geolocator.checkPermission();
+//     print("Initial Permission: $permission");
+
+//     if (permission == LocationPermission.denied) {
+//       permission = await Geolocator.requestPermission();
+//       print("Permission after request: $permission");
+//       if (permission == LocationPermission.denied) {
+//         print("Location denied");
+//         return;
+//       }
+//     }
+
+//     if (permission == LocationPermission.deniedForever) {
+//       print("Location permissions are permanently denied.");
+//       return;
+//     }
+
+//     if (permission == LocationPermission.whileInUse ||
+//         permission == LocationPermission.always) {
+//       double distanceInMeters = Geolocator.distanceBetween(
+//         latitude1,
+//         longitude1,
+//         latitude2,
+//         longitude2,
+//       );
+//       print("======================");
+//       print("Distance in  K meters: ${distanceInMeters / 1000}");
+//       print("======================");
+      
+
+//       // Geolocator.getPositionStream().listen((Position? position) {
+//       //   print("================");
+//       //   print(position!.latitude);
+//       //   print(position!.longitude);
+//       //   print("========================");
+//       // });
+
+//       // Position position = await Geolocator.getCurrentPosition();
+//       // print("========================");
+//       // print(position);
+//       // print("========================");
+//       // print("Permission active: ${permission.name}");
+//     }
+//   }
+
+//   @override
+//   void initState() {
+//     getCurentLocationApp();
+//     super.initState();
+//   }
+
+//   // @override
+//   // void dispose() {
+//   //   if(positionStream != null){
+//   //     positionStream?.cancel();
+//   //   }
+//   //   super.dispose();
+//   // }
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text("geolocator", style: TextStyle(color: Colors.white)),
+//         backgroundColor: const Color.fromARGB(185, 0, 0, 0),
+//       ),
+//       body: Container(child: Text("Zaidoon")),
+//     );
+//   }
+// }
+
+
+

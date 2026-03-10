@@ -3635,8 +3635,6 @@
 //   }
 // }
 
-
-
 // // lesson-50+51
 // // // (searchDelegate_part1 & searchDelegate_part2)
 
@@ -3661,8 +3659,6 @@
 //   }
 // }
 
-
-
 // lesson-52
 // (scroll)
 // import 'package:flutter/material.dart';
@@ -3686,12 +3682,6 @@
 //   }
 // }
 
-
-
-
-
-
- 
 // // lesson-53+54
 // // (packages_part1+packages_part2)
 // import 'package:flutter/material.dart';
@@ -3714,9 +3704,6 @@
 //     return MaterialApp(home: Homebage());
 //   }
 // }
-
-
-
 
 // // lesson-55+56+57
 // // (HTTP__API_part1 + HTTP__API_part2 + FutureBuilder)
@@ -3741,8 +3728,6 @@
 //   }
 // }
 
-
-
 // // lesson-59
 // // (shared_preferences)
 // import 'package:flutter/material.dart';
@@ -3766,36 +3751,131 @@
 //   }
 // }
 
+// // lesson-60
+// // (Custom_fonts)
+// import 'package:flutter/material.dart';
+// import 'package:flutter_learning_journey_wael_abu_hamza/homebage.dart';
+
+// void main() {
+//   runApp(const MainApp());
+// }
+
+// class MainApp extends StatefulWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   State<MainApp> createState() => _MainAppState();
+// }
+
+// class _MainAppState extends State<MainApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       theme: ThemeData(
+//         fontFamily: "BebasNeue",
+//       ),
+//       home: Homebage(
+
+//       ));
+//   }
+// }
+
+// // lesson-61
+// // (Theme)
+// import 'package:flutter/material.dart';
+// import 'package:flutter_learning_journey_wael_abu_hamza/homebage.dart';
+
+// void main() {
+//   runApp(const MainApp());
+// }
+
+// class MainApp extends StatefulWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   State<MainApp> createState() => _MainAppState();
+// }
+
+// class _MainAppState extends State<MainApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       theme: ThemeData(
+//         fontFamily: "BebasNeue",
+//         appBarTheme: AppBarTheme(backgroundColor: Colors.green),
+//         textTheme: TextTheme(
+//           bodySmall: TextStyle(color: Colors.blue, fontSize: 14),
+//           bodyMedium: TextStyle(color: Colors.black, fontSize: 16),
+//           bodyLarge: TextStyle(
+//             color: Colors.black,
+//             fontWeight: FontWeight.bold,
+//             fontSize: 20,
+//           ),
+//         ),
+//       ),
+//       home: Homebage(),
+//     );
+//   }
+// }
 
 
-// lesson-60
-// (Custom_fonts)
-import 'package:flutter/material.dart';
-import 'package:flutter_learning_journey_wael_abu_hamza/homebage.dart';
 
-void main() {
-  runApp(const MainApp());
-}
+// // lesson-62
+// // (Flutter_Launcher_icons)
+// import 'package:flutter/material.dart';
+// import 'package:flutter_learning_journey_wael_abu_hamza/homebage.dart';
 
-class MainApp extends StatefulWidget {
-  const MainApp({super.key});
+// void main() {
+//   runApp(const MainApp());
+// }
 
-  @override
-  State<MainApp> createState() => _MainAppState();
-}
+// class MainApp extends StatefulWidget {
+//   const MainApp({super.key});
 
-class _MainAppState extends State<MainApp> {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        fontFamily: "BebasNeue",
-      ),
-      home: Homebage(
-        
-      ));
-  }
-}
+//   @override
+//   State<MainApp> createState() => _MainAppState();
+// }
+
+// class _MainAppState extends State<MainApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Homebage(),
+//     );
+//   }
+// }
+
+
+
+// // lesson-63+64
+// // (geolocator_part1+geolocator_part2)
+// import 'package:flutter/material.dart';
+// import "package:flutter_learning_journey_wael_abu_hamza/homebage.dart";
+
+// void main() {
+//   runApp(const MainApp());
+// }
+
+// class MainApp extends StatefulWidget {
+//   const MainApp({super.key});
+
+//   @override
+//   State<MainApp> createState() => _MainAppState();
+// }
+
+// class _MainAppState extends State<MainApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Homebage(),
+//     );
+//   }
+// }
+
+
+
+
+
 
 
 
